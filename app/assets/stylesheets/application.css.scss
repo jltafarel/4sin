@@ -1,6 +1,4 @@
-@import 'bourbon';
-@import 'base/base';
-@import 'neat';
+@import 'bootstrap';
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -15,4 +13,60 @@
  *
  *
  *= require_self
+ *= require_tree .
  */
+$branco: #FFFFFF;
+$preto: #000000;
+$header-height: 50px;
+$header-background: $branco;
+$html-background: #D9534F;
+$font-color: $branco;
+$button-width: 289px;
+$button-height: 88px;
+$phone-img-height: 512px;
+$footer-height: 30px;
+$footer-background: #494949;
+
+html {
+  background-color: $html-background;
+}
+.navbar-brand:hover {
+  color: $preto !important;
+}
+li{
+  a:hover {
+    color: $preto !important;
+  }
+}
+
+.navbar{
+  background-color: $header-background;
+}
+main{
+  color: $font-color;
+  margin-top: $header-height + 20px;
+  margin-bottom: $footer-height + 10px;
+  background-color: $html-background;
+}
+.btn-lg { 
+  width: $button-width;
+  margin-top: 10px;
+}
+
+.right {
+  height: $phone-img-height;
+  position: relative;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  background-color: $footer-background;
+}

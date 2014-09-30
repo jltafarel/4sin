@@ -6,7 +6,7 @@ html lang="pt"
     meta name="description" content=""
 
     title
-      = page_title(app_name: 'example')
+      = page_title(app_name: '4Sin')
 
     link href="/favicon.ico" rel=("shortcut icon")
 
@@ -19,4 +19,11 @@ html lang="pt"
 
   body class=body_class
     = render 'flash_messages'
-    = yield
+    header
+      = render partial: 'shared/header'
+
+    main
+      = yield
+
+    footer
+      = render partial: 'shared/footer'
