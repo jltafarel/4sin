@@ -1,0 +1,19 @@
+h1 Listing profissionals
+
+table
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @profissionals.each do |profissional|
+      tr
+        td = link_to 'Show', profissional
+        td = link_to 'Edit', edit_profissional_path(profissional)
+        td = link_to 'Destroy', profissional, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Profissional', new_profissional_path
